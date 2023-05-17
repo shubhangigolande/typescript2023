@@ -95,40 +95,23 @@ class Fatherss {
         console.log(this.firstName + this.lastName);
     }
 }
-class Sons extends Fathers {
+class Sons extends Fatherss {
     constructor(fn, ln, snm) {
         super(fn, ln);
         this.sname = snm;
     }
+    dispalysnm() {
+        console.log(this.sname + this.lastName);
+    }
 }
-// class Father {
-//     fname:string
-//     lname:string
-//     constructor(fn:string , ln:string){
-//         this.fname = fn
-//         this.lname = ln
-//     }
-//     displayF(){
-//         console.log(this.fname + this.lname)
-//     }
-// }
-// class Sister extends Father {
-//     sname:string
-//     constructor(fn:string , ln:string, sname:string){
-//         super(fn,ln)
-//         this.sname = sname       
-//     }
-//     displayS(){
-//         console.log(this.sname + this.lname)
-//     }
-// }
-// class Brother extends Father {
-//     bname:string
-//     constructor(fn:string , ln:string, bname:string){
-//         super(fn,ln)
-//         this.bname = bname       
-//     }
-//     displayB(){
-//         console.log(this.bname + this.lname)
-//     }
-// }
+class Daughter extends Fatherss {
+    constructor(fn, ln, dn) {
+        super(fn, ln);
+        this.dname = dn;
+    }
+    dispalydnm() {
+        console.log(this.dname + this.lastName);
+    }
+}
+let shiv = new Sons('amol', 'golande', 'shiv');
+console.log(shiv.dispalyed(), shiv.dispalysnm());
